@@ -44,7 +44,9 @@ class ArticleModel {
                     // Get the articles
                     let article = articleService.articles!
                     // Pass it back to the view controller in the main thread
-                    self.delegate?.articlesRetrieved(article)
+                    DispatchQueue.main.async {
+                        self.delegate?.articlesRetrieved(article)
+                    }
                 } catch {
                     print(error)
                 } // End Do - Catch
