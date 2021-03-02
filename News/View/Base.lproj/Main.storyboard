@@ -70,6 +70,7 @@
                     <navigationItem key="navigationItem" id="AFe-kr-6TJ"/>
                     <connections>
                         <outlet property="tableView" destination="SHH-cU-m5F" id="EPB-eY-jO7"/>
+                        <segue destination="bwY-hG-y7q" kind="show" identifier="goToDetail" id="HbH-WT-5rr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -92,6 +93,9 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="aHT-wx-l3x">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cIq-An-yjj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -99,9 +103,16 @@
                             <constraint firstAttribute="bottom" secondItem="sKd-25-35A" secondAttribute="bottom" id="DSU-QF-C0Z"/>
                             <constraint firstAttribute="trailing" secondItem="sKd-25-35A" secondAttribute="trailing" id="FJr-Cl-6iV"/>
                             <constraint firstItem="sKd-25-35A" firstAttribute="top" secondItem="YCk-Og-vp7" secondAttribute="top" id="lGN-aZ-5U9"/>
+                            <constraint firstItem="aHT-wx-l3x" firstAttribute="centerX" secondItem="YCk-Og-vp7" secondAttribute="centerX" id="mlJ-Mp-jHf"/>
                             <constraint firstItem="sKd-25-35A" firstAttribute="leading" secondItem="YCk-Og-vp7" secondAttribute="leading" id="qAQ-Ej-39D"/>
+                            <constraint firstItem="aHT-wx-l3x" firstAttribute="centerY" secondItem="YCk-Og-vp7" secondAttribute="centerY" id="t6A-iy-qbZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="aJl-k2-eHi"/>
+                    <connections>
+                        <outlet property="spinner" destination="aHT-wx-l3x" id="doE-S1-kGR"/>
+                        <outlet property="webView" destination="sKd-25-35A" id="Hq6-iQ-Cjo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oU-JS-wL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

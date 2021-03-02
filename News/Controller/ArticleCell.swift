@@ -51,7 +51,9 @@ class ArticleCell: UITableViewCell {
             UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut, animations: {
                 self.articleImageView.alpha = 1
             }, completion: nil)
+        
             return
+        
         }
         
         // Create the url
